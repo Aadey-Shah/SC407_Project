@@ -12,7 +12,7 @@ const handleQRGenerator = async (req, res) => {
       {
         json: {
           frame_name: "no-frame",
-          qr_code_text: `localhost:5000/display/${itemid}`,
+          qr_code_text: `https://sc407.onrender.com/display/${itemid}`,
           image_format: "SVG",
           qr_code_logo: "scan-me-square",
         },
@@ -78,7 +78,7 @@ const handleQRGenerator = async (req, res) => {
 const getElement = async (similarProducts) => {
   return await similarProducts
     .map((e) => {
-      return `<div class="link"><a href="http://localhost:5000/display/${e.itemid}" target="_blank">${e.itemname}</a></div>`;
+      return `<div class="link"><a href="https://sc407.onrender.com/display/${e.itemid}" target="_blank">${e.itemname}</a></div>`;
     })
     .join(``);
 };
