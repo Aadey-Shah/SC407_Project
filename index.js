@@ -5,10 +5,12 @@ const productRoute = require(`./routes/products`);
 
 const app = express();
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 mongoose
-  .connect("mongodb://127.0.0.1/ie403")
+  .connect(
+    "mongodb+srv://aadeyshah55:yIabtOSlvWyzPH2W@cluster0.hmwo8xm.mongodb.net/"
+  )
   .then(console.log("MongoDB Connected Successfully"))
   .catch((err) => {
     console.log(err);
@@ -20,5 +22,5 @@ app.use(bodyParser.json());
 app.use(`/`, productRoute);
 
 app.listen(port, () => {
-    console.log(`app is listening to ${port}.....`);
+  console.log(`app is listening to ${port}.....`);
 });
