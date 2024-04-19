@@ -138,9 +138,9 @@ const getDetails = async (req, res) => {
                     height: 100%;
                   }
                   .card {
-                    background-color: rgb(7, 115, 7);
+                    background-color: rgb(58, 91, 58);
                     font-size: 40px;
-                    width: 70%;
+                    width: 60%;
                     margin: 40px auto;
                     padding: 20px 30px;
                     border-radius: 25px;
@@ -153,12 +153,15 @@ const getDetails = async (req, res) => {
                     font-size: 23px;
                     display: flex;
                     justify-content: space-between;
-                    width: 60%;
+                    width: 80%;
                     margin: auto;
                     padding: 20px 0px;
                   }
                   .remarks {
                     font-size: 23px;
+                    width: 80%;
+                    margin: 25px auto;
+                    text-align: left;
                   }
                   #similar {
                     font-size: medium;
@@ -176,6 +179,9 @@ const getDetails = async (req, res) => {
                   .link {
                     margin : 15px 0px
                   }
+                  #note {
+                    width: 60%;
+                  }
                   @media only screen and (max-width: 650px) {
                     .head {
                       display: flex;
@@ -186,7 +192,7 @@ const getDetails = async (req, res) => {
                       margin-bottom: 7.5px;
                     }
                     .title {
-                      font-size: 20px;
+                      font-size: 35px;
                       font-weight: 500;
                     }
                     .logo {
@@ -211,6 +217,7 @@ const getDetails = async (req, res) => {
                       padding: 10px 0px;
                     }
                     .remarks {
+                      width: 90%;
                       margin-top: 12px;
                       font-size: 12.5px;
                     }
@@ -222,6 +229,9 @@ const getDetails = async (req, res) => {
                       text-decoration: none;
                       color: rgb(155, 155, 255);
                       font-size: 12.5px;
+                    }
+                    #note {
+                      width: 84%;
                     }
                   }
                 </style>
@@ -260,6 +270,7 @@ const getDetails = async (req, res) => {
                   <div class="title2">Similar Products</div>
                   ${tags}
                 </div>
+                <div id="note" class="remarks" style="text-align:left">*Tree equivalent - number of trees needed to offset that much carbon emission in a year</div>
               </body>
             </html>
             `);
