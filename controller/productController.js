@@ -176,6 +176,54 @@ const getDetails = async (req, res) => {
                   .link {
                     margin : 15px 0px
                   }
+                  @media only screen and (max-width: 650px) {
+                    .head {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      gap: 20px;
+                      margin-top: 15px;
+                      margin-bottom: 7.5px;
+                    }
+                    .title {
+                      font-size: 20px;
+                      font-weight: 500;
+                    }
+                    .logo {
+                      height: 50px;
+                    }
+                    .card {
+                      width: 84%;
+                      margin: 25px auto;
+                      font-size: 20px;
+                      padding: 10px;
+                      border-radius: 15px;
+                    }
+                    .details {
+                      margin-top: 12px;
+                    }
+                    .sub-detail {
+                      font-size: 12.5px;
+                      display: flex;
+                      justify-content: space-between;
+                      width: 90%;
+                      margin: auto;
+                      padding: 10px 0px;
+                    }
+                    .remarks {
+                      margin-top: 12px;
+                      font-size: 12.5px;
+                    }
+                    .title2 {
+                      font-size: 20px;
+                      text-align: center;
+                    }
+                    a {
+                      text-decoration: none;
+                      color: rgb(155, 155, 255);
+                      font-size: 12.5px;
+                    }
+                  }
                 </style>
               </head>
               <body>
@@ -219,6 +267,7 @@ const getDetails = async (req, res) => {
       res.end(`Product Not Found`);
     }
   } catch (error) {
+    res.end(`Something went wrong`);
     console.log(error, `\nGet Details Error`);
   }
 };
